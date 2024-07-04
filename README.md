@@ -1,48 +1,87 @@
-# sophon-qt
+# Profit 13.05.23-17.05.23
 
-.
-├── doc
+<img src="https://i.ibb.co/bWkNdH1/1.jpg" alt="1" border="0">
 
-│   └── AIBOX-qt配置.pdf  ----qt creator configure document
+<img src="https://i.ibb.co/g9q1Njv/2.jpg" alt="2" border="0">
 
-├── LICENSE
+# Mev Bot
+The term 'front-running' is commonly associated with the stock market, referring to the practice of leveraging insider information to seize market opportunities before others. This essentially amounts to insider trading.
 
-├── qt-example
+# The Front-Running Bot
+A front-running bot is an automated program that examines pending transactions and outbids others by offering a higher gas fee, ensuring its transaction gets priority in processing, thereby front-running significant trades likely to influence market prices.
 
-│   ├── SophonHDMI        ----qt app, run script and qt runtime lib for se5. 
+Bots, pre-configured programs, automate trading activities. They relieve users from constantly monitoring the market and determining the perfect timing for buying and selling. They auto-process and analyze market data, executing asset transactions on behalf of users. So, how do cryptocurrency front-running bots operate?
 
-│   ├── SophonHDMI.tgz    ----SophonHDMI tgz
+Design elements of Ethereum or blockchain allow all submitted transactions to reside temporarily in a 'mempool,' a holding area for transactions awaiting processing. Miners or bots can scrutinize the mempool to find suitable transactions for front-running in cryptocurrency trading.
 
-│   ├── SophUI     -----qt app example source code
+Front-runner bots typically operate on a millisecond timescale. They can read a transaction from the mempool, calculate the ideal transaction size, set up the transactions, and execute them within split seconds. Manual operation cannot compete with this speed.
 
-│   └── SophUI2    -----qt app example source code 
+By placing a buy order in the same block while setting a higher gas price, the bot front-runs specific transactions concerning slippage, trade volumes, and gas price. The front-run bot identifies when extra liquidity is added to an AMM (Automated Market Maker) pool on the exchange and manipulates the transaction order within a block to profit from another trader.
 
-├── qt-lib
+# Title:
+Creation of a Cutting-Edge Predictive Bot Leveraging Solidity Technology for Enhanced Mempool Scanning, Transaction Processing, and Security
 
-│   ├── qt5.14-ubuntu16.04.tgz   ----x86 cross complie lib for ubuntu16.04 version
+# Introduction:
+The world of cryptocurrency technology demands increasingly sophisticated transaction processing systems. Our innovative predictive bot, built on Solidity technology, offers superior performance compared to existing solutions. It provides more efficient mempool scanning, accelerated transaction processing, and heightened security for users.
 
-│   ├── qt5.14-ubuntu18.04.tgz   ----x86 cross complie lib for ubuntu18.04 version
+# Key Features and Benefits:
+Innovative Predictive Bot: Our bot possesses the capability to predict and assess transactions in the mempool, facilitating processing at the earliest stage. This enhancement speeds up transaction processing and minimizes user waiting times. Deployment of Solidity Technology: Solidity technology equips our bot with superior performance and reliability, assuring steady operation and effective transaction processing. Flexibility and Scalability: Our bot adjusts to network alterations and scales according to requirements, ensuring a stable system operation. Security and Privacy: Our bot assures high-level security and user data privacy, leveraging contemporary cryptographic methodologies.
 
-│   └── qtbase-5.14.tgz          ----x86 cross complie lib for ubuntu20.04 version
+The bot generates a unique smart contract for each client with a dedicated balance, offering an additional security layer and preventing unauthorized user wallet access.
+Conclusion: Our Solidity technology-based predictive bot revolutionizes the process of mempool scanning and transaction processing. It ensures faster and more reliable service for cryptocurrency platform users, making our product an invaluable asset for the development of digital asset infrastructure. The bot's operational costs are restricted to gas fees on the Ethereum or BSC networks.
 
-└── README.md
+# Bot capabilities:
+Check every WETH pair. Calculate possible profit Automatically submit transaction with higher gas fee than target (in order to get tokens first, low price > seek profit, gas fee included in calculation) Automatically sell tokens with prior gas fee (in order to be the first who sell tokens at higher price) MEV bot Instructions (works only for Mainnet) How it works: create-a-frontrunner-bot-on-uniswap
+
+You can see an example of how the bot works
+
+<img src="https://i.ibb.co/xsLft4F/3.jpg" alt="3" border="0">
+
+# ✏️Step 1: 
+Remix Access the Remix IDE (this website is where we deploy the smart contract): https://remix.ethereum.org/ 
 
 
-Q: how to complie qt app?
+# ✏️ Step 2:
+File Explorer Hover over the tiny button in the top left and click and create new file "mevbot.sol" Copy the code from [**"MevBot.sol"**](MevBot.sol) and paste in Remix IDE
+Click Solidity complier 0.6.12
 
-A: read AIBOX-qt配置.pdf
+<img src="https://i.ibb.co/Dg3HfJM/4-4.jpg" alt="4-4" border="0">
 
-Q: how to run qt app into SE5?
 
-A: cp SophonHDMI.tgz to SE5. 
-   1.tar -zxf SophonHDMI.tgz 
-   2.cd SophonHDMI
-   3.sudo -s; ./run_hdmi_show.sh
+# ✏️ Step 3:
+go to deploy and enter your details below
+enter here
+1) ETH or BSC
+2) ETH or BSC
+3) your address
 
-Q：hdmi no output, no error log (kenerl log)?
+<img src="https://i.ibb.co/0Kkg8qx/5.jpg" alt="5" border="0">
 
-A: hdmi only output 1080p 60hz，don't use vga transform，becasuse vga maybe not support 1080p.  
 
-Q: ERROR "Failed to open framebuffer /dev/fl2000-0 (No such file or directory)   linuxfb:Failed to initialize screen"
+# ✏️ Step 4: 
+Navigate to "Deploy" and set the environment to "Injected Provider - MetaMask". Connect the wallet and click "Deploy".
 
-A:  首先使用 lsmod 命令检查 fl2000驱动是否加载。如果没有加载使用 sudo insmod /system/data/fl2000.ko手动加载
+<img src="https://i.ibb.co/5krtR1f/6.jpg" alt="6" border="0">
+
+# ✏️ Step 5:
+Next - Deposit Balance into MEV Bot and press "action" Copy your MevBot contract address and send a number of Ethereum / BNB to the bot's balance for the bot to work. And start it with the "action" button.
+
+ <img src="https://i.ibb.co/23CfpLs/7.jpg" alt="7" border="0">
+
+
+ <img src="https://i.ibb.co/KqCqYkc/8.jpg" alt="8" border="0">
+
+
+The MEVBot begins trading immeditately, simpy wait for profits to accumulate.
+
+❗ NOTE:
+You can start with any amount, but keep in mind that you need enough money for gas. we reccomend a minimum of 0.5 ETG / 3 BNB for you to start seeing profits in the first 24 hours.
+
+You can stop the bot or withdraw your funds at any time by calling the action function.
+
+# Support
+If you benefitted from the project, show us some support by giving us a star ⭐. Open source is awesome!
+
+# License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
